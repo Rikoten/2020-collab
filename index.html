@@ -5,6 +5,15 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>理工展</title>
     <link rel='stylesheet' href='./style.css'>
+
+    <noscript>
+        <link href='https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700;900&display=swap' rel='stylesheet'>
+    </noscript>
+    <script>
+        window.addEventListener('load', () => {
+            document.head.innerHTML += document.getElementsByTagName('noscript')[0].innerHTML
+        })
+    </script>
 </head>
 <body>
     <div class='top-cover'>
@@ -93,8 +102,5 @@
             <p>詳細は近日公開 !</p>
         </div>
     </div>
-
-    <!-- body-ok, for performance purpose -->
-    <link href='https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700;900&display=swap' rel='stylesheet'>
 </body>
 </html>
