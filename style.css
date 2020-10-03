@@ -1,6 +1,6 @@
 :root {
     --color-lightgray: #f5f5f5;
-    --color-darkgray: #a4a4a4;
+    --color-darkgray: #909090;
     --color-font-main: #484848;
     --color-font-lighter: #707070;
     --color-font-link: #0366d6;
@@ -11,7 +11,7 @@
     border: 0;
     box-sizing: border-box;
     font-family: 'M PLUS 1p', sans-serif;
-    color: var(--color-font-main);
+    color: var(--color-font-lighter);
 }
 
 ul {
@@ -20,27 +20,68 @@ ul {
 }
 
 h2, h3 {
-    color: var(--color-font-lighter);
+    color: var(--color-darkgray);
 }
 
-
-.top-cover .yey h2 {
-    color: var(--color-font-main);
+p, li, time {
+    transform: rotate(0.03deg);
 }
 
-.top-cover .schedule * {
-    color: var(--color-font-lighter);
+.top-cover .yey h2, .top-cover .schedule time, .top-cover .schedule p {
+    font-size: 1.875rem;
+    color: var(--color-darkgray);
+    font-weight: 900;
+}
+
+.top-cover .schedule .time time {
+    font-size: 1.5rem;
+}
+
+.top-cover .schedule .time p {
+    font-size: 1rem;
+}
+
+.top-cover time .slash {
+    font-size: 1.4rem;
+    color: var(--color-darkgray);
+}
+
+.top-cover time .day {
+    font-size: 1.3rem;
+    color: var(--color-darkgray);
+}
+
+.top-cover {
+    position: relative;
+    height: 700px;
+    border-bottom: 30px;
+    border-color: var(--color-lightgray);
+    border-style: solid;
+    overflow: hidden;
+    background: linear-gradient(to bottom, var(--color-lightgray) 50%, white 50%); 
+}
+
+.top-cover > .yey, .top-cover > .schedule {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    font-weight: 900;
+    color: var(--color-darkgray);
+}
+
+.top-cover .schedule {
+    top: 350px;
 }
 
 .top-cover > div {
-    height: 15rem;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 820px) {
     .top-cover .yey {
         flex-direction: row;
     }
@@ -53,35 +94,24 @@ h2, h3 {
     }
 }
 
-.top-cover .yey {
-    background: var(--color-lightgray);
-}
-
-.top-cover .schedule {
-    line-height: 3;
-    font-weight: bold;
-}
-
-.top-cover .schedule .day {
-    font-size: .9rem;
+.top-cover .schedule, .top-cover .yey {
+    line-height: 2.5;
 }
 
 .top-cover .time p {
     display: inline;
-    font-weight: normal;
 }
 
 .top-cover .date time:nth-child(1)::after {
-    content: '→';
-    font-weight: normal;
-    margin: 0 1rem;
-}
-
-.top-cover .schedule {
-    border-bottom: 30px;
-    border-color: var(--color-lightgray);
+    content: "";
+    margin: 0 1rem 0 1.3rem;
+    width: 0px;
+    height: 0px;
+    display: inline-block;
     border-style: solid;
-}
+    border-width: 10px 0 10px 17.3px;
+    border-color: transparent transparent transparent var(--color-darkgray);
+  }
 
 .top-cover .time p {
     display: inline;
@@ -93,6 +123,31 @@ h2, h3 {
     margin: 0 .5rem;
 }
 
+.top-cover > .building-wrapper {
+    width: 150%;
+    height: 700px;
+    min-width: 900px;
+    max-width: 1500px;
+    position: absolute;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.building1 {
+    width: 400px;
+    height: 600px;
+    background: url(background-building.svg) repeat;
+}
+
+.building2 {
+    width: 300px;
+    height: 300px;
+    background: url(background-building.svg) repeat;
+}
 
 .collab-heading {
     margin: 60px auto;
@@ -118,8 +173,27 @@ h2, h3 {
     border-style: solid;
     background: var(--color-lightgray);
     margin-bottom: 30px;
-    padding: 1rem;
-    padding-top: 0;
+    padding: 0.75rem 1rem 1.5rem;
+}
+
+.collab .collab-info .collab-wrapper {
+    max-width: 30rem;
+    margin: 0 auto;
+}
+
+.collab .collab-info .date {
+    margin: 0.5rem 10px 0;
+}
+
+.collab .collab-info time {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--color-darkgray);
+}
+
+.collab .collab-info time span {
+    font-size: 1rem;
+    color: var(--color-darkgray);
 }
 
 .collab .collab-info .shop-name::before {
@@ -127,46 +201,78 @@ h2, h3 {
     display: inline-block;
     font-size: .7rem;
     font-weight: bold;
-    height: calc(0.7 * var(--size));
-    width: calc(0.7 * var(--size));
-    line-height: calc(0.7 * var(--size));
-    margin: calc(0.15 * var(--size)) .5rem;
+    height: calc(0.9 * var(--size));
+    width: calc(0.9 * var(--size));
+    line-height: calc(0.9 * var(--size));
+    margin: 0 .5rem calc(0.1 * var(--size));
     border-radius: 100%;
     background: white;
     text-align: center;
+    vertical-align: middle;
+    transform: rotate(0.03deg);
+    color: var(--color-darkgray);
+    font-weight: 900;
+}
+
+.collab .shop-info li h3::before {
+    --size: 4rem;
+    white-space: pre;
+    content: 'コラボ\A店舗';
+    display: table-cell;
+    font-size: .7rem;
+    font-weight: bold;
+    height: calc(0.9 * var(--size));
+    width: calc(0.9 * var(--size));
+    line-height: 1rem;
+    margin: 0 .5rem calc(0.1 * var(--size));
+    border-radius: 100%;
+    background: white;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .collab .collab-info .shop-name h3 {
     display: inline-block;
     line-height: var(--size);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
 }
 
 .collab .collab-info .date time:nth-child(1)::after {
-    content: '→';
-    margin: 0 .5rem;
+    content: "";
+    margin: 0 1rem 0 1.3rem;
+    width: 0px;
+    height: 0px;
+    display: inline-block;
+    border-style: solid;
+    border-width: 8px 0 8px 13.9px;
+    border-color: transparent transparent transparent var(--color-darkgray);
 }
 
 .collab .collab-image a {
     display: block;
     margin: 0 auto 30px auto;
     max-width: 400px;
-    width: 100%;
+    width: calc(100% - 20px);
 }
 
 .collab .collab-image img {
-    width: inherit;
+    width: 100%;
 }
 
 .collab .collab-detail {
     margin-bottom: 30px;
     background: var(--color-lightgray);
-    padding: 1rem;
+    padding: 1.25rem;
 }
 
 .collab .collab-detail > *:not(:last-child) {
     margin-bottom: 1rem;
+}
+
+.collab .collab-detail h3, .collab .collab-detail ul, .collab .collab-detail p {
+    max-width: 30rem;
+    margin: 0 auto;
 }
 
 .collab .shop-info {
@@ -184,45 +290,75 @@ h2, h3 {
 .collab .shop-info .shop-hp p a {
     color: var(--color-font-link);
     font-weight: bold;
+    font-size: 1.17rem;
+}
+
+.collab .shop-info .shop-hp h3 {
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
+
+.collab .shop-info ul {
+    max-width: 65rem;
+    margin: auto;
 }
 
 .collab .shop-info li {
     margin-top: 40px;
 }
 
-.collab .shop-info li div {
-    background: white;
-    padding: 1rem;
-    margin-top: 20px;
+.collab .shop-info li h3 {
+    max-width: 30rem;
+    margin: 0 auto;
+    border-spacing: 20px 0;
 }
 
-.collab .collab-info {
+.collab .shop-info li h3 span {
+    display: table-cell;
+    vertical-align: middle;
+    color: var(--color-darkgray);
+}
+
+.collab .shop-info li div {
+    background: white;
+    padding: 1.25rem;
+    margin: 20px auto 0px;
+    max-width: 30rem;
+}
+
+.collab .collab-wrapper {
     position: relative;
 }
 
-.collab .collab-info::before {
+.collab .collab-wrapper::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: 10%;
     left: 0;
     width: 100%;
     height: 100%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
-    filter: opacity(10%);
+    filter: opacity(5%);
     pointer-events: none;
 }
 
-.collab-kokoro .collab-info::before {
+.collab-kokoro .collab-wrapper::before {
     background-image: url(./kokoro-logo.png);
 }
 
-.collab-menji .collab-info::before {
+.collab-menji .collab-wrapper:before {
     background-image: url(./meji-logo.png);
 }
 
-@media screen and (min-width: 600px) {
+.collab .collab-wrapper p {
+    margin-left: 10px;
+    font-weight: bold;
+    color: var(--color-darkgray);
+}
+
+@media screen and (min-width: 820px) {
     .collab {
         position: relative;
     }
@@ -237,7 +373,7 @@ h2, h3 {
 
     .collab .collab-info {
         width: 50%;
-        padding-left: 15%;
+        padding-left: 25%;
     }
 
     .collab .collab-image {
@@ -249,19 +385,24 @@ h2, h3 {
 
     .collab .collab-image img {
         width: 100%;
-        max-height: 21rem;
+        max-height: 26rem;
         object-fit: contain;
     }
 
     .collab .collab-detail {
         margin-right: 0;
         margin-left: auto;
-        width: 85%;
-        padding-right: 50%;
+        width: 75%;
+        padding: 2rem 50% 2rem 3rem;
     }
 
     .collab .shop-info .shop-hp {
         text-align: center;
+    }
+
+    .collab .shop-info .shop-hp h3 {
+        display: inline;
+        margin-right: 30px;
     }
 
     .collab .shop-info .shop-hp p {
@@ -275,5 +416,34 @@ h2, h3 {
 
     .collab .shop-info li {
         width: 40%;
+    }
+
+    .collab .collab-info {
+        position: relative;
+    }
+
+    .collab .collab-detail h3, .collab .collab-detail ul, .collab .collab-detail p {
+        margin: 0;
+    }
+
+    .collab .shop-info li h3 {
+        margin-left: -20px;
+    }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1200px) {
+    .collab .collab-info {
+        width: 50%;
+        padding-left: 15%;
+    }
+
+    .collab .collab-detail {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 30rem) {
+    .collab .shop-info li h3 {
+        margin-left: -20px;
     }
 }
