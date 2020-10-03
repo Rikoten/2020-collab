@@ -24,6 +24,7 @@ h2, h3 {
 }
 
 p, li, time {
+    /* Windows でのフォントレンダリングが汚い問題を解消する */
     transform: rotate(0.03deg);
 }
 
@@ -58,7 +59,7 @@ p, li, time {
     border-color: var(--color-lightgray);
     border-style: solid;
     overflow: hidden;
-    background: linear-gradient(to bottom, var(--color-lightgray) 50%, white 50%); 
+    background: linear-gradient(to bottom, var(--color-lightgray) 50%, white 50%);
 }
 
 .top-cover > .yey, .top-cover > .schedule {
@@ -137,13 +138,30 @@ p, li, time {
     transform: translate(-50%);
 }
 
-.building1 {
+@media screen and (max-width: 400px) {
+    .top-cover .date time {
+        display: block;
+    }
+
+    .top-cover .date time:nth-child(1)::after {
+        display: block;
+        transform: rotate(90deg);
+        margin: 0;
+        margin-left: calc(50% - 10px);
+    }
+
+    .top-cover .time {
+        margin-top: 2rem;
+    }
+}
+
+.top-cover .building1 {
     width: 400px;
     height: 600px;
     background: url(background-building.svg) repeat;
 }
 
-.building2 {
+.top-cover .building2 {
     width: 300px;
     height: 300px;
     background: url(background-building.svg) repeat;
@@ -442,6 +460,7 @@ p, li, time {
     }
 }
 
+/* .shop-info li ul の幅と合わせている */
 @media screen and (max-width: 30rem) {
     .collab .shop-info li h3 {
         margin-left: -20px;
