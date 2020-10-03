@@ -28,6 +28,19 @@ p, li, time {
     transform: rotate(0.03deg);
 }
 
+.presite {
+    line-height: 2rem;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    background: var(--color-darkgray);
+    color: white;
+}
+
+.presite a {
+    color: white;
+}
+
 .top-cover .yey h2, .top-cover .schedule time, .top-cover .schedule p {
     font-size: 1.875rem;
     color: var(--color-darkgray);
