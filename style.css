@@ -147,7 +147,7 @@ p, li, time {
         display: block;
         transform: rotate(90deg);
         margin: 0;
-        margin-left: calc(50% - 5px);
+        margin-left: calc(50% - 10px);
     }
 
     .top-cover .time {
