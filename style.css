@@ -357,10 +357,6 @@ p, li, time {
     max-width: 30rem;
 }
 
-.collab.collab-menji .collab-info {
-    margin-bottom: 80px;
-}
-
 .collab .collab-wrapper {
     position: relative;
 }
@@ -416,6 +412,10 @@ p, li, time {
         top: 0;
         right: 10%;
         width: 35%;
+    }
+
+    .collab.collab-menji .collab-image {
+        top: 10%;
     }
 
     .collab .collab-image img {
