@@ -357,6 +357,10 @@ p, li, time {
     max-width: 30rem;
 }
 
+.collab.collab-menji .collab-info {
+    margin-bottom: 80px;
+}
+
 .collab .collab-wrapper {
     position: relative;
 }
