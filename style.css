@@ -414,6 +414,10 @@ p, li, time {
         width: 35%;
     }
 
+    .collab.collab-menji .collab-image {
+        top: 10%;
+    }
+
     .collab .collab-image img {
         width: 100%;
         max-height: 26rem;
