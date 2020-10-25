@@ -417,16 +417,19 @@ p, li, time {
     max-width: 30rem;
 }
 
-.fes-links > ul > li > ul > li:nth-child(1) {
+.fes-links > ul > li > a {
+    display: block;
+    text-decoration: none;
+}
+
+.fes-links > ul > li > a > ul > li:nth-child(1) {
     font-weight: bold;
     font-size: 1.4rem;
     line-height: 3rem;
 }
 
-.fes-links > ul > li > ul > li > a {
-    font-weight: bold;
-    font-size: 1.17rem;
-    line-height: 3rem;
+.fes-links > ul > li > a > ul > li.link{
+    display: none;
 }
 
 @media screen and (min-width: 820px) {
@@ -506,12 +509,20 @@ p, li, time {
     }
     
     .fes-links > ul {
-        max-width: 65rem;
-        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
     }
     
     .fes-links > ul > li {
         width: 40%;
+    }
+
+    .fes-links > ul > li > a > ul > li.link{
+        display: list-item;
+        font-weight: bold;
+        text-decoration: underline;
+        font-size: 1.17rem;
+        line-height: 3rem;
     }
 }
 
