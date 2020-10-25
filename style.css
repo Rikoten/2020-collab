@@ -389,6 +389,57 @@ p, li, time {
     color: var(--color-darkgray);
 }
 
+.banner-heading {
+    margin: 60px auto 60px;
+    text-align: center;
+}
+
+.link-heading {
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.fes-links {
+    /*background: var(--color-lightgray);*/
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.fes-links > ul {
+    max-width: 65rem;
+    margin: auto;
+}
+
+.fes-links > ul > li {
+    background: var(--color-lightgray);
+    padding: 1.25rem 0.75rem;
+    margin: 20px auto 0px;
+    max-width: 30rem;
+}
+
+.fes-links > ul > li > a {
+    display: block;
+    text-decoration: none;
+    position: relative;
+}
+
+.fes-links > ul > li > a::after {
+    position: absolute;
+    content: url(nav-icon.svg);
+    top: calc(50% - 20px);
+    right: 0px;
+    height: 40px;
+    width: 20px;
+    object-fit: contain;
+    z-index: 20;
+}
+
+.fes-links > ul > li > a > ul > li:nth-child(1) {
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 3rem;
+}
+
 @media screen and (min-width: 820px) {
     .collab {
         position: relative;
@@ -463,6 +514,15 @@ p, li, time {
 
     .collab .shop-info li h3 {
         margin-left: -20px;
+    }
+    
+    .fes-links > ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .fes-links > ul > li {
+        width: 40%;
     }
 }
 
