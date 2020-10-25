@@ -401,7 +401,7 @@ p, li, time {
 
 .fes-links {
     /*background: var(--color-lightgray);*/
-    text-align: center;
+    text-align: left;
     margin-bottom: 50px;
 }
 
@@ -413,7 +413,8 @@ p, li, time {
 .fes-links > ul > li {
     background: var(--color-lightgray);
     padding: 1.25rem 0.75rem;
-    margin: 20px auto 0px;
+    margin: 20px 0 0px;
+    text-align: center;
     max-width: 30rem;
 }
 
@@ -518,11 +519,14 @@ p, li, time {
     
     .fes-links > ul {
         display: flex;
-        justify-content: space-evenly;
+        width: 75%;
+        min-width: 800px;
+        justify-content: space-between;
+        margin: 20px auto;
     }
     
     .fes-links > ul > li {
-        width: 40%;
+        width: 45%;
     }
 }
 
