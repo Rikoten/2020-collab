@@ -390,12 +390,21 @@ p, li, time {
 }
 
 .fes-links {
-    background: var(--color-lightgray);
+    /*background: var(--color-lightgray);*/
     text-align: center;
+    margin-bottom: 100px;
 }
 
-.fes-links div {
-    background: white;
+.fes-links > ul {
+    display: flex;
+    justify-content: space-evenly;
+
+    max-width: 65rem;
+    margin: auto;
+}
+
+.fes-links > ul > li {
+    background: var(--color-lightgray);
     padding: 1.25rem;
     margin: 20px auto 0px;
     max-width: 30rem;
