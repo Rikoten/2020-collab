@@ -389,6 +389,18 @@ p, li, time {
     color: var(--color-darkgray);
 }
 
+.fes-links {
+    background: var(--color-lightgray);
+    text-align: center;
+}
+
+.fes-links div {
+    background: white;
+    padding: 1.25rem;
+    margin: 20px auto 0px;
+    max-width: 30rem;
+}
+
 @media screen and (min-width: 820px) {
     .collab {
         position: relative;
