@@ -389,6 +389,16 @@ p, li, time {
     color: var(--color-darkgray);
 }
 
+.banner-heading {
+    margin: 60px auto 60px;
+    text-align: center;
+}
+
+.link-heading {
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
 .fes-links {
     /*background: var(--color-lightgray);*/
     text-align: center;
@@ -396,16 +406,12 @@ p, li, time {
 }
 
 .fes-links > ul {
-    display: flex;
-    justify-content: space-evenly;
-
     max-width: 65rem;
     margin: auto;
 }
 
 .fes-links > ul > li {
     background: var(--color-lightgray);
-    width: 40%;
     padding: 1.25rem;
     margin: 20px auto 0px;
     max-width: 30rem;
@@ -497,6 +503,15 @@ p, li, time {
 
     .collab .shop-info li h3 {
         margin-left: -20px;
+    }
+    
+    .fes-links > ul {
+        max-width: 65rem;
+        margin: auto;
+    }
+    
+    .fes-links > ul > li {
+        width: 40%;
     }
 }
 
