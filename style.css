@@ -405,9 +405,22 @@ p, li, time {
 
 .fes-links > ul > li {
     background: var(--color-lightgray);
+    width: 40%;
     padding: 1.25rem;
     margin: 20px auto 0px;
     max-width: 30rem;
+}
+
+.fes-links > ul > li > ul > li:nth-child(1) {
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 3rem;
+}
+
+.fes-links > ul > li > ul > li > a {
+    font-weight: bold;
+    font-size: 1.17rem;
+    line-height: 3rem;
 }
 
 @media screen and (min-width: 820px) {
