@@ -32,13 +32,13 @@
     <link rel='stylesheet' href='./style.css'>
     <link rel = "stylesheet" href = "https://rikoten.github.io/2020-bannerData/banner.css">
 
-    <noscript>
-        <link href='https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700;900&display=swap' rel='stylesheet'>
-    </noscript>
     <script>
-        window.addEventListener('load', () => {
-            document.head.innerHTML += document.getElementsByTagName('noscript')[0].innerHTML
-        })
+        window.onload = () => {
+            const link = document.createElement('link')
+            link.rel = 'stylesheet'
+            link.href = 'https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700;900&display=swap'
+            document.head.appendChild(link)
+        }
     </script>
 </head>
 <body>
