@@ -635,7 +635,7 @@ p, li, time {
 #about-link {
     display: block;
     position: fixed;
-    top: 30%;
+    bottom: 10%;
     right: 0;
     height: 40px;
     width: 150px;
