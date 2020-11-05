@@ -736,6 +736,7 @@ p, li, time {
 
 @media screen and (max-width: 550px) {
     .app-band div:nth-child(2) p {
+        width: 300px;
         font-size: 22px;
         line-height: 45px;
         font-weight: bold;
