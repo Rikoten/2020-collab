@@ -632,16 +632,14 @@ p, li, time {
     /*width: 100%;*/
 }
 
-#about-link {
+#about-link, #pamph-link {
     display: block;
     position: fixed;
-    bottom: 10%;
     right: 0;
     height: 40px;
     width: 150px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    background: linear-gradient(to right, #1A2D63 70%, #243D7D 90%);
     line-height: 40px;
     text-decoration: none;
     text-align: center;
@@ -652,7 +650,17 @@ p, li, time {
     z-index: 500;
 }
 
-#about-link::after {
+#about-link {
+    background: linear-gradient(to right, #1A2D63 70%, #243D7D 90%);
+    bottom: 10%;
+}
+
+#pamph-link {
+    background: #484848;
+    bottom: calc(10% - 60px);
+}
+
+#about-link::after, #pamph-link::after {
     position: absolute;
     content: '';
     top: calc(50% - 10px);
